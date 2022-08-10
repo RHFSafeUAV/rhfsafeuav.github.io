@@ -1,0 +1,273 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<html>
+<head>
+	<title>UVRSABI</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Creative and Descriptive Paper Title." />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">UAV-based Visual Remote Sensing for Automated Building Inspection (UVRSABI)</span>
+		<table align=center width=600px>
+			<table align=center width=600px cellspacing="25px">
+				<tr>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Kushagra Srivastava</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Dhruv Patel</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Aditya Kumar Jha</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Mohit Kumar Jha</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Jaskirat Singh</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Ravi Kiran Sarvadevabhatla</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Harikumar Kandath</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Pradeep Kumar Ramancharla</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">K. Madhava Krishna</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:20px"><a href=''>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:20px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+
+	<center>
+		<table align=center width=850px>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:500px" src="assets/images/overview.png"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+		<table align=center width=850px>
+			<tr>
+				<td> <center>
+					Architecture of automated building inspection using the aerial images captured using UAV. The odometry information of UAV is also used for the quantification of different parameters involved in the inspection. <center>
+				</td>
+			</tr>
+		</table>
+	</center>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Overview</h1></center>
+		<tr>
+			<td>
+				<ul>
+					<li>We automate the inspection of buildings through UAV-based image data collection and a post-processing module to infer and quantify the details which helps in avoiding manual inspection, reducing the time and cost.
+					<li> We introduced a novel method to estimate the distance between adjacent buildings and structures.
+					<li> We developed an architecture that can be used to segment roof tops in case of both orthogonal and non-orthogonal view using a state-of-the-art semantic segmentation model.
+					<li> Taking into consideration the importance of civil inspection of buildings we introduced the software library that helps in estimating the distances between adjacent buildings, estimate plan-shape area and object on teh rooftop, and estimating the roof layout.
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Modules</h1></center>
+		<tr>
+			<td> <p>In order to estimate the seismic structural parameters of the buildings the following modules hav been introduced:</p>
+				<ul>
+					<li>Distance between Adjacent Buildings
+					<li> Plan Shape and Roof Area Estimation
+					<li> Roof Layout Estimation
+
+				</ul>
+			
+			</td>
+		</tr>
+	</table>
+
+	<br>
+
+
+
+
+	<center> <h3> Distance between Adjacent Buildings </h3>
+	<img class="round" style="width:1000px" src="assets/images/DistanceModule.png"/>
+	<p>This module provide us the distance between two adjacent buildings. We sampled the images from the videos captured by UAV and performs the panoptic segmentation using state-of-art deep learning model, eliminating any vegetations (like trees). The masked images are then input to a state-of-the art image based 3D reconstruction which outputs a dense 3D poiunt cloud. We then apply RANSAC algorithm for fitting planes between the segmented structural point cloud. Further the points are sampled on these planes to calculate the distance between the adjacent buildings at different locations.</p>
+	</center>
+	<br>
+
+
+	<center> <h3> RESULTS - Distance between Adjacent Buildings </h3>
+	<img class="round" style="width:800px" src="assets/images/Results-DistanceModule-1.png"/>
+	<p>In this figure, (a), (b) and (c) and (d), (e) and (f) represent the implementation of plane fitting using piecewise-RANSAC in different views for Buildings.</p>
+	
+	</center>
+	<br>
+
+
+
+
+	<center> <h3> Plan Shape and Roof Area Estimation </h3>
+	<img class="round" style="width:1000px" src="assets/images/PlanShape&RoofareaEstimation.png"/>
+	<p>This module provides information regardiung the shape and roof area of the building. We segmented the roof using a state-of-the-art semantic segmentation deep learning model. We subjected the input images to a pre-processing module removes distortions from the wide-angle images. then the Data augmentation technique is used to increase the robustness and performance. Hence, later the roof area is calculated using some equation.
+</p>
+	</center>
+	<br>
+
+
+
+	<center> <h3> RESULTS - Plan Shape and Roof Area Estimation </h3>
+	<img class="round" style="width:800px" src="assets/images/Results-PlanShape&RoofareaEstimation-1.png"/>
+	<p>This figure represents the roof segmentation results for 4 buildings</p>
+	
+	</center>
+	<br>
+
+
+	<center> <h3> Roof Layout Estimation </h3>
+	<img class="round" style="width:1000px" src="assets/images/RoofLaoutEstimation.png"/>
+	<p>This module provides information about the roof layout. Since it is not possible to capture the whole roof in a single frame specially in the case of large sized buildings. Hence, we perform large scale image stitching of partially visible roofs followed by non-structural elements detection and roof segmentation.
+
+</p>
+	</center>
+	<br>
+
+
+
+	<center> <h3> RESULTS - Roof Layout Estimation </h3>
+	<img class="round" style="width:800px" src="assets/images/imagestitchingoutput.jpeg"/>
+	<p>Stitched Image</p>
+	<img class="round" style="width:800px" src="assets/images/roofmask.png"/>
+	<p>Roof Mask</p>
+	<img class="round" style="width:800px" src="assets/images/objectmask.png"/>
+	<p>Object Mask</p>
+	
+	</center>
+	<br>
+
+
+
+
+<!--
+
+	<center> <h1> Resources </h1>
+	<table width="100%" style="margin: 20pt auto; text-align: center;">
+	      <tr>
+				<td width="33%" valign="middle">
+				    <center>
+					<a href="https://github.com/atmacvit/meronymnet" target="_blank"
+					   class="imageLink"><img src="./resources/Octocat.png" ,=, width="75%" /></a><br /><br />
+					<a href="https://github.com/atmacvit/meronymnet" target="_blank">Code</a>
+				    </center>
+				</td>
+				<td width="33%" valign="middle">
+				    <center>
+					<a href="https://drive.google.com/file/d/1NnY4tcV1wnlSWMzT_Ae6hH6v5l8GCIrX/view?usp=sharing" target="_blank"
+					   class="imageLink"><img src="./resources/Paper_crop.png" ,=, width="75%" /></a><br /><br />
+					<a href="https://drive.google.com/file/d/1NnY4tcV1wnlSWMzT_Ae6hH6v5l8GCIrX/view?usp=sharing" target="_blank">Paper</a>
+				    </center>
+
+				</td>
+
+
+			       <td width="33%" valign="middle">
+				    <center>
+					<a href="" target="_blank"
+					   class="imageLink"><img src="./resources/Supp_crop.png" ,=, width="75%" /></a><br /><br />
+					<a href="" target="_blank">Supplementary</a>
+				    </center>
+				</td>
+	      </tr>
+    	</table>
+	</center>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br> -->
+<hr>
+<center> <h1> Contact </h1>
+	<p>If you have any question, please reach out to any of the above mentioned authors.</p>
+	</center>
+</body>
+</html>
+
