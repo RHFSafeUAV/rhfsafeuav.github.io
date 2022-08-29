@@ -30,47 +30,47 @@
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Kushagra Srivastava</a></span>
+							<span style="font-size:20px"><a href="https://www.linkedin.com/in/kushagra-srivastava-8ba9801a3/">Kushagra Srivastava</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:20"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Dhruv Patel</a></span>
+							<span style="font-size:20"><a href="https://dhruv2012.github.io/">Dhruv Patel</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Aditya Kumar Jha</a></span>
+							<span style="font-size:20px"><a href="https://www.linkedin.com/in/aditya-kumar-jha-185b9720b/">Aditya Kumar Jha</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Mohit Kumar Jha</a></span>
+							<span style="font-size:20px"><a href="https://www.linkedin.com/in/mohhit1iit/">Mohit Kumar Jha</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Jaskirat Singh</a></span>
+							<span style="font-size:20px"><a href="https://www.linkedin.com/in/jaskiratsingh2000/">Jaskirat Singh</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Ravi Kiran Sarvadevabhatla</a></span>
+							<span style="font-size:20px"><a href="https://ravika.github.io/">Ravi Kiran Sarvadevabhatla</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Harikumar Kandath</a></span>
+							<span style="font-size:20px"><a href="https://sites.google.com/view/harikumar-kandath/home">Harikumar Kandath</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Pradeep Kumar Ramancharla</a></span>
+							<span style="font-size:20px"><a href="https://fac-webpages.iiit.ac.in/~ramancharla/">Pradeep Kumar Ramancharla</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:20px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">K. Madhava Krishna</a></span>
+							<span style="font-size:20px"><a href="https://www.iiit.ac.in/people/faculty/mkrishna/">K. Madhava Krishna</a></span>
 						</center>
 					</td>
 				</tr>
@@ -84,7 +84,7 @@
 					</td>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:20px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+							<span style="font-size:20px"><a href=''>[GitHub]</a></span><br>
 						</center>
 					</td>
 				</tr>
@@ -121,7 +121,7 @@
 					<li>We automate the inspection of buildings through UAV-based image data collection and a post-processing module to infer and quantify the details which helps in avoiding manual inspection, reducing the time and cost.
 					<li> We introduced a novel method to estimate the distance between adjacent buildings and structures.
 					<li> We developed an architecture that can be used to segment roof tops in case of both orthogonal and non-orthogonal view using a state-of-the-art semantic segmentation model.
-					<li> Taking into consideration the importance of civil inspection of buildings we introduced the software library that helps in estimating the distances between adjacent buildings, estimate plan-shape area and object on teh rooftop, and estimating the roof layout.
+					<li> Taking into consideration the importance of civil inspection of buildings we introduced a software library that helps in estimating the Distances between Adjacent Buildings, Plan-shape of a Building, Roof Area, Non-Structural Elements (NSE) on the rooftop, and the Roof Layout.
 			</td>
 		</tr>
 	</table>
@@ -132,7 +132,7 @@
 	<table align=center width=850px>
 		<center><h1>Modules</h1></center>
 		<tr>
-			<td> <p>In order to estimate the seismic structural parameters of the buildings the following modules hav been introduced:</p>
+			<td> <p>In order to estimate the seismic structural parameters of the buildings the following modules have been introduced:</p>
 				<ul>
 					<li>Distance between Adjacent Buildings
 					<li> Plan Shape and Roof Area Estimation
@@ -151,14 +151,14 @@
 
 	<center> <h3> Distance between Adjacent Buildings </h3>
 	<img class="round" style="width:1000px" src="assets/images/DistanceModule.png"/>
-	<p>This module provide us the distance between two adjacent buildings. We sampled the images from the videos captured by UAV and performs the panoptic segmentation using state-of-art deep learning model, eliminating any vegetations (like trees). The masked images are then input to a state-of-the art image based 3D reconstruction which outputs a dense 3D poiunt cloud. We then apply RANSAC algorithm for fitting planes between the segmented structural point cloud. Further the points are sampled on these planes to calculate the distance between the adjacent buildings at different locations.</p>
+	<p>This module provide us the distance between two adjacent buildings. We sampled the images from the videos captured by UAV and perform panoptic segmentation using state-of-art deep learning model, eliminating vegetation (like trees) from the images. The masked images are then fed to a state-of-the art image-based 3D reconstruction library which outputs a dense 3D point cloud. We then apply RANSAC for fitting planes between the segmented structural point cloud. Further, the points are sampled on these planes to calculate the distance between the adjacent buildings at different locations.</p>
 	</center>
 	<br>
 
 
-	<center> <h3> RESULTS - Distance between Adjacent Buildings </h3>
+	<center> <h3> Results: Distance between Adjacent Buildings </h3>
 	<img class="round" style="width:800px" src="assets/images/Results-DistanceModule-1.png"/>
-	<p>In this figure, (a), (b) and (c) and (d), (e) and (f) represent the implementation of plane fitting using piecewise-RANSAC in different views for Buildings.</p>
+	<p> Sub-figures (a), (b) and (c) and (d), (e) and (f) represent the implementation of plane fitting using piecewise-RANSAC in different views for two subject buildings.</p>
 	
 	</center>
 	<br>
@@ -168,16 +168,16 @@
 
 	<center> <h3> Plan Shape and Roof Area Estimation </h3>
 	<img class="round" style="width:1000px" src="assets/images/PlanShape&RoofareaEstimation.png"/>
-	<p>This module provides information regardiung the shape and roof area of the building. We segmented the roof using a state-of-the-art semantic segmentation deep learning model. We subjected the input images to a pre-processing module removes distortions from the wide-angle images. then the Data augmentation technique is used to increase the robustness and performance. Hence, later the roof area is calculated using some equation.
+	<p>This module provides information regarding the shape and roof area of the building. We segment the roof using a state-of-the-art semantic segmentation deep learning model. We also subjected the input images to a pre-processing module that removes distortions from the wide-angle images. Data augmentation was used to increase the robustness and performance. Roof Area was calculated using the focal length of the camera, the height of the drone from the roof and the segmented mask area in pixels.
 </p>
 	</center>
 	<br>
 
 
 
-	<center> <h3> RESULTS - Plan Shape and Roof Area Estimation </h3>
+	<center> <h3> Results: Plan Shape and Roof Area Estimation </h3>
 	<img class="round" style="width:800px" src="assets/images/Results-PlanShape&RoofareaEstimation-1.png"/>
-	<p>This figure represents the roof segmentation results for 4 buildings</p>
+	<p>This figure represents the roof segmentation results for 4 subject buildings.</p>
 	
 	</center>
 	<br>
@@ -185,7 +185,7 @@
 
 	<center> <h3> Roof Layout Estimation </h3>
 	<img class="round" style="width:1000px" src="assets/images/RoofLaoutEstimation.png"/>
-	<p>This module provides information about the roof layout. Since it is not possible to capture the whole roof in a single frame specially in the case of large sized buildings. Hence, we perform large scale image stitching of partially visible roofs followed by non-structural elements detection and roof segmentation.
+	<p>This module provides information about the roof layout. Since it is not possible to capture the whole roof in a single frame specially in the case of large sized buildings, we perform large scale image stitching of partially visible roofs followed by NSE detection and roof segmentation.
 
 </p>
 	</center>
