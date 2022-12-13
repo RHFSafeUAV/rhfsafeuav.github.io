@@ -75,6 +75,7 @@
 					</td>
 				</tr>
 			</table>
+			<h5><i>*Spotlight publication at the Computer Vision for Civil and Infrastructure Engineering Workshop, ECCV 2022</i></h5>
 			<table align=center width=380px>
 				<tr>
 					<td align=center width=120px>
@@ -162,8 +163,9 @@
 
 
 	<center> <h3> Results: Distance between Adjacent Buildings </h3>
-	<img class="round" style="width:800px" src="assets/images/Results-DistanceModule-1.png"/>
-	<p> Sub-figures (a), (b) and (c) and (d), (e) and (f) represent the implementation of plane fitting using piecewise-RANSAC in different views for two subject buildings.</p>
+	<img class="round" style="width:800px" src="assets/images/distance_results.png"/>
+	<p> Distances calculated for Buildings 1 and 2, and Building 3 as per our method and Google Earth along with Ground Truth measured using a ToF sensor; Our method performs with an average error of 0.96% compared to Google Earth’s 1.36%.
+	</p>
 	
 	</center>
 	<br>
@@ -182,14 +184,16 @@
 
 	<center> <h3> Results: Plan Shape and Roof Area Estimation </h3>
 	<img class="round" style="width:800px" src="assets/images/Results-PlanShape&RoofareaEstimation-1.png"/>
-	<p>This figure represents the roof segmentation results for 4 subject buildings.</p>
-	
+	<img class="round" style="width:600px" src="assets/images/roof_area_estimation.gif"/>
+	<p>This figure represents the qualitative and quantitative results for roof segmentation for 4 subject buildings.</p>
+
+
 	</center>
 	<br>
 
 
 	<center> <h3> Roof Layout Estimation </h3>
-	<img class="round" style="width:1000px" src="assets/images/RoofLaoutEstimation.png"/>
+	<img class="round" style="width:600px" src="assets/images/roof_layout_estimation.gif"/>
 	<p>This module provides information about the roof layout. Since it is not possible to capture the whole roof in a single frame specially in the case of large sized buildings, we perform large scale image stitching of partially visible roofs followed by NSE detection and roof segmentation.
 
 </p>
