@@ -145,20 +145,31 @@
 
 
 
-	<center> <h3> Distance between Adjacent Buildings </h3>
+	<center> <h3>Results - Potential Landing Zone Detection</h3>
 	<img class="round" style="width:1000px" src="assets/images/DistanceModule.png"/>
-	<p>This module provide us the distance between two adjacent buildings. We sampled the images from the videos captured by UAV and perform panoptic segmentation using state-of-art deep learning model, eliminating vegetation (like trees) from the images. The masked images are then fed to a state-of-the art image-based 3D reconstruction library which outputs a dense 3D point cloud. We then apply RANSAC for fitting planes between the segmented structural point cloud. Further, the points are sampled on these planes to calculate the distance between the adjacent buildings at different locations.</p>
-	</center>
-	<br>
+	<li>We validated our PLZ detection module in real-world scenarios. Specifically, we tested the module in Rural, Urban, and Sub-urban scenarios</li>
 
 
-	<center> <h3> Results: Distance between Adjacent Buildings </h3>
-	<img class="round" style="width:800px" src="assets/images/distance_results.png"/>
-	<p> Distances calculated for Buildings 1 and 2, and Building 3 as per our method and Google Earth along with Ground Truth measured using a ToF sensor; Our method performs with an average error of 0.96% compared to Google Earth’s 1.36%.
-	</p>
+<li>Yellow circles correspond to the identified PLZs, and their resulting diameters (distances) along with the area occupied can be visualized in the Table</li>
+
+
+ <li>Time-of-Flight (ToF) sensor for obtaining the ground truth, which has a maximum range of 60 meters.</li>
+
+	<center> 
+	<img class="round" style="width:800px" src="assets/images/plzres.png"/>
 	
+	
+<br>
 	</center>
-	<br>
+		
+		<li>The average percentage error for our distance and area-estimation method is recorded as 0.9692% and 1.9427%
+
+
+<li>Compared the accuracy to that of Google Earth, which has been listed as 1% in [1]
+
+
+<li>Compared our area-estimation resulting average percentage error with the work done by authors that claims for 5% error in [2]
+	
 
 
 
